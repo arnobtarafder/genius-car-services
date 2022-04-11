@@ -3,7 +3,7 @@ import React from 'react';
 const Expert = ({expert}) => {
     const {id, name, img} = expert;
     return (
-      <div class="card gx-5 col-sm-12 col-md-6 col-lg-4" style={{width: "18rem"}}>
+      <div class="card" style={{width: "18rem"}}>
         <img class="card-img-top" src={img} alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{name}</h5>
