@@ -5,8 +5,13 @@
 }
 .services-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 21px;
+}
+.title{
+    margin: 20px 70px;
+    align-items: flex-end;
+    flex-direction: row;
 }
 
 /* make services responsive */
