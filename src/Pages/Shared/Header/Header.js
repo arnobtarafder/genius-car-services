@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-     <div>
-       <Navbar collapseOnSelect sticky="top" expand="lg" bg="primary" variant="dark">
+       <Navbar collapseOnSelect sticky="top" expand="lg" bg="primary" variant="dark" >
   <Container>
   <Navbar.Brand as={Link} to="/">
     <img height={30} src="https://www.designfreelogoonline.com/wp-content/uploads/2020/08/00422-car-01.png" alt="" /> Genius Car Services
@@ -13,8 +12,8 @@ const Header = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features"></Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="home#services">Services</Nav.Link>
+      <Nav.Link href="home#experts">Experts</Nav.Link>
       <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -32,7 +31,6 @@ const Header = () => {
   </Navbar.Collapse>
   </Container>
 </Navbar>
-     </div>
     );
 };
 
