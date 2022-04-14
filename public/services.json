@@ -17,7 +17,7 @@
         "id": 3,
         "name": "OIL CHANGING",
         "price": "150",
-        "description": "If you go long enough without an oil change, it could cost you a car. Once the motor oil becomes sludge, it no longer removes heat from the engine. This can lead to a complete engine shutdown that will require a brand new engine – or a new ride – to fix.",
+        "description": "If you go long enough without an oil change, it could cost you a car. Once the motor oil becomes sludge, it no longer removes heat from the engine. This can lead to a complete engine shutdown that will require a brand new engine – or a new ride – to fix. your car's engine requires full-synthetic motor oil, it might go as far as 15,000 miles between services!",
         "img": "https://i.ibb.co/Yh04YVw/3.jpg"
     },
     {
@@ -38,7 +38,7 @@
         "id": 6,
         "name": "COMPLETE ANALYSIS",
         "price": "300",
-        "description": "Complete Analysis provides claims professionals with the necessary tools to evaluate claims involving fire and mechanical failure in vehicles of all types",
+        "description": "Complete Analysis provides claims professionals with the necessary tools to evaluate claims involving fire and mechanical failure in vehicles of all types. Our experts are skilled in the numerous technical systems that compose vehicles today.",
         "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
     }
 ]

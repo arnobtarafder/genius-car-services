@@ -1,4 +1,10 @@
 .service {
     border: 1px solid lightcyan;
     border-radius: 11px;
+    /* position: relative; */
 }
+/* .service button{
+    position: absolute;
+    bottom: 0;
+    padding-top: 11px;
+} */
