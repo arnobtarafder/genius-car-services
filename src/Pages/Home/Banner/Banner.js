@@ -17,8 +17,8 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Mr.Tom Flappy</h3>
+            <p>I have fixed more than 1000 cars in my life. you can trust me.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -29,8 +29,8 @@ const Banner = () => {
           />
   
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Mr.John sharlock</h3>
+            <p>I am mr.john. I am a senior car mechanic from genius car services.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -41,9 +41,9 @@ const Banner = () => {
           />
   
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>Mr.Repair Cool</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              I've been here for more than 11 years. That means I am so experienced car mechanic.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
