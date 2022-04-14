@@ -35,7 +35,7 @@ const Register = () => {
     }
 
     return (
-        <div className='register-form'>
+        <div className='register-form mt-5'>
             <h1 style={{textAlign: "center"}}>Please Register</h1>
 
             <form onSubmit={handleRegister}>
@@ -44,7 +44,9 @@ const Register = () => {
                 <input type="email" name='email' id='' placeholder='Email Address'/>
                 <br />
                 <input type="password" name='password' id='' placeholder='Password' />
-                <input type="submit" value="Register" />
+                <input className='mt-3 me-2' type="checkbox" name="terms" id="terms" />
+                <label htmlFor="terms">Accept Genius Car Terms and Conditions</label>
+                <input className='btn btn-primary d-block mt-2' type="submit" value="Register" />
                 <br />
             </form>
             <p>Already have an account? <Link to="/login" className='text-danger text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
