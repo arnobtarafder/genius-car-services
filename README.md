@@ -1,8 +1,8 @@
 # Genius Car Services
-##### This is a demo website and hope it can be a full professional site. 
-##### This is the newer version of **Genesis Automobiles**.  
-##### You can truly use this site by login and with the help of advance local storage. 
-##### This is not fulfill to post now. (under construction)
+This is a demo website and hope it can be a full professional site. 
+This is the newer version of **Genesis Automobiles**.  
+You can truly use this site by login or signup and with the help of advanced local storage, you can store your current profile stage data. Maybe the color combinations in this site are not much good because I have tried to make the site with bootstrap primary edition.
+This is not fulfilled to post now.
 
 ### [Live Site](https://genius-car-services-4801c.web.app/)
 ### https://genius-car-services-4801c.web.app/
@@ -25,5 +25,12 @@ The following open source packages are used in this project:
 * Firebase Hosting
 * React Toastify
 * React Firebase Hooks
+
+## Firebase Qualities
+* Google Authorization
+* Github Authorization
+* Email Verification
+* Reset Password
+* Hosting
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
