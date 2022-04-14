@@ -1,6 +1,6 @@
 # Genius Car Services
 ##### This is a demo website and hope it can be a full professional site. 
-##### This is the newer version of genesis automobiles.  
+##### This is the newer version of **Genesis Automobiles**.  
 ##### You can truly use this site by login and with the help of advance local storage. 
 ##### This is not fulfill to post now. (under construction)
 
