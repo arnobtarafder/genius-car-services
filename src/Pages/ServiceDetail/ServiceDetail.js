@@ -2,13 +2,13 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const ServiceDetail = () => {
-    const { serviceId } = useParams()
+    const { serviceId } = useParams();
     return (
         <div>
-            <h1>Product Id {serviceId}</h1>
+            <h1 className='my-5 ms-5'>Product Id: {serviceId}</h1>
             <div className='text-center'>
                 <Link to="/checkout">
-                    <button className='btn btn-primary'>Proceed Checkout</button>
+                    <button className='btn btn-primary mt-5'>Proceed Checkout</button>
                 </Link>
             </div>
         </div>
