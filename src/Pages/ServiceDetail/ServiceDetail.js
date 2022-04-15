@@ -20,7 +20,7 @@ const ServiceDetail = () => {
             <h1 className='my-5 ms-5 border-start border-primary w-25 ps-4 py-2'>Product Id: {serviceId}</h1>
             
           <div style={{margin:"0px auto"}} className='service rounded w-100 position-relative mt-5 px-auto ps-5 pt-5 text-center'>
-            <img className='w-50 border-start border-top border-primary p-5' src={service[serviceId-1]?.img} alt="" />
+            <img className='w-50 border-start border-top border-primary p-5 md:w-100 sm:w-100' src={service[serviceId-1]?.img} alt="" />
             <div className='p-3'>
             <h2>{service[serviceId-1]?.name}</h2>
             <h4 className='text-sans fw-normal pb-3'>Price: {service[serviceId-1]?.price}</h4>

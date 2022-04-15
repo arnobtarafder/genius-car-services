@@ -21,8 +21,8 @@ const Header = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="home#services">Services</Nav.Link>
-      <Nav.Link href="home#experts">Experts</Nav.Link>
+      <Nav.Link href="/home#services">Services</Nav.Link>
+      <Nav.Link href="/home#experts">Experts</Nav.Link>
       <NavDropdown title="Engineers" id="collasible-nav-dropdown">
         <NavDropdown.Item href="https://github.com/robert" target="_blank">Robert</NavDropdown.Item>
         <NavDropdown.Item href="https://github.com/john" target="_blank">John</NavDropdown.Item>
