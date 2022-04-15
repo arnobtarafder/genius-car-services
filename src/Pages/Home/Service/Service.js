@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({ service }) => {
@@ -14,12 +14,12 @@ const Service = ({ service }) => {
             <div className='p-3'>
                 <h2>{name}</h2>
                 <p>Price: {price}</p>
-                <p className='pb-5'><small>{
+                <p className='pb-5 fs-5'><small>{
                     description.length < 378
                         ? description
                         :
                         <div>
-                            {description.slice(0, 378)}<span className=''><button onClick={() => navigateToServiceDetail(id)} className='btn btn-link text-decoration-none ps-0'>...read more</button></span> 
+                            {description.slice(0, 278)}<span className=''><button onClick={() => navigateToServiceDetail(id)} className='btn btn-link text-decoration-none ps-0'>...read more</button></span> 
                         </div>
                     }</small></p>
                 <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary position-absolute top-auto bottom-0'>Book Now</button>
