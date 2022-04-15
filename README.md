@@ -7,12 +7,13 @@ This is not fulfilled to post now.
 ### [Live Site](https://genius-car-services-4801c.web.app/)
 ### https://genius-car-services-4801c.web.app/
 
-## Total Pages
+## Total Pages: 6
 * Home 
-* Login
 * Registration
+* Login
+* Mechanics Information
 * Cart
-* Checkout
+* Proceed Checkout
 
 ## Prerequisites
 
@@ -32,5 +33,7 @@ The following open source packages are used in this project:
 * Email Verification
 * Reset Password
 * Hosting
+
+##### 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
