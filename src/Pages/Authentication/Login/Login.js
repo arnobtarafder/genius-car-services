@@ -5,7 +5,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 import BrowserTitle from '../../Shared/BrowserTitle/BrowserTitle';
 import Loading from '../../Shared/Loading/Loading';
