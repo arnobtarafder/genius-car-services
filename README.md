@@ -23,10 +23,12 @@ The following open source packages are used in this project:
 * React Bootstrap
 * Raw CSS
 * React Router DOM v6
-* Firebase
+* Firebase Authentication
+* Firebase Authorization
 * Firebase Hosting
 * React Toastify
 * React Firebase Hooks
+* React Helmet Async
 
 ## Firebase Qualities
 * Google Authorization
