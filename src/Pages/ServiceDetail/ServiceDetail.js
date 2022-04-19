@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import BrowserTitle from '../Shared/BrowserTitle/BrowserTitle';
 import './ServiceDetail.css'
 
 const ServiceDetail = () => {
@@ -18,6 +19,7 @@ const ServiceDetail = () => {
 
     return (
         <div>
+            <BrowserTitle title="Product Details"></BrowserTitle>
             <h1 className='my-5 ms-5 border-start border-primary ps-4 py-2'>Product Id: {serviceId}</h1>
             
           <div style={{margin:"0px auto"}} className='service rounded w-100 px-auto pt-5 text-center'>

@@ -6,6 +6,7 @@ import auth from '../../../firebase.init'
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { async } from '@firebase/util';
 import Loading from '../../Shared/Loading/Loading';
+import BrowserTitle from '../../Shared/BrowserTitle/BrowserTitle';
 
 
 const Register = () => {
@@ -52,6 +53,7 @@ const Register = () => {
 
     return (
         <div className='register-form mt-5'>
+               <BrowserTitle title="Register"></BrowserTitle>
             <h1 style={{ textAlign: "center" }}>Please Register</h1>
 
             <form onSubmit={handleRegister}>
