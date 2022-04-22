@@ -11,6 +11,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import AddService from './Pages/AddService/AddService';
+import ManageService from './Pages/ManageServices/ManageServices';
 
 function App() {
   return (
@@ -22,16 +23,25 @@ function App() {
               <Home />
             // </RequireAuth>
         }></Route>
+
         <Route path='/home' element={
             // <RequireAuth>
               <Home />
             // </RequireAuth>
         }></Route>
-        <Route path='/addservice' element={
+
+        <Route path='/addService' element={
           <RequireAuth>
             <AddService />
           </RequireAuth>
         }></Route>
+        
+        <Route path='/manageServices' element={
+          <RequireAuth>
+            <ManageService />
+          </RequireAuth>
+        }></Route>
+
         <Route path='/service/:serviceId' element={<ServiceDetail />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/login' element={<Login />}></Route>
