@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -10,21 +10,27 @@ const SocialLogin = () => {
     const [signInWithGithub, user2, loading2, error2] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     let errorElement;
-
+    useEffect(()=>{
+        if (user || user2) {
+        navigate("/home")
+        }
+        },[user || user2])
+    
     if(loading || loading2) {
         return <Loading />
     }
-
+    
     if(error || error2) {
         return (
-        errorElement = <div>
+            errorElement = <div>
             <p className="text-danger">Error: {error?.message} {error2?.message}</p>
             </div>
         )
     }
-    if (user || user2) {
-        navigate("/home")
-    }
+    // if (user || user2) {
+    //     navigate("/home")
+    // }
+
 
 
     return (

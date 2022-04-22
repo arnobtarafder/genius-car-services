@@ -11,6 +11,11 @@ const RequireAuth = ({children}) => {
     const [user, loading] = useAuthState(auth);
     const location = useLocation();
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth)
+    
+    const handleReload = () => {
+        window.location.reload();
+    }
+
     if(loading) {
         return <Loading />
     }
@@ -22,6 +27,7 @@ const RequireAuth = ({children}) => {
         return <div>
             <h3 className='text-danger text-center mt-5'>Your Email Is Not Varified</h3>
             <h5 className='text-success text-center'>Please Verify Your Email Address</h5>
+            <h5 className='text-primary text-center'>Reload page after verify</h5>
             <div className="text-center">
             <button
                 onClick={async () => {
@@ -30,6 +36,11 @@ const RequireAuth = ({children}) => {
                 }} 
                 className='btn btn-primary rounded-pill px-5 mt-3'>
                     Verify Email
+            </button>
+            <button
+            onClick={handleReload}
+            className='btn btn-primary rounded-pill px-5 mt-3'>
+                Reload page
             </button>
             </div>
             <ToastContainer />

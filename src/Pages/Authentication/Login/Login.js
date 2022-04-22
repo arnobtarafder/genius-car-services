@@ -1,5 +1,5 @@
 import { async } from '@firebase/util';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Helmet } from 'react-helmet-async';
@@ -16,7 +16,8 @@ const Login = () => {
     const passwordRef = useRef("");
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    // let from = location.state?.from?.pathname || "/";
+ 
     let errorElement;
 
     const [
@@ -26,16 +27,19 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    useEffect(()=>{
+        let from = location.state?.from?.pathname || "/";
+        if (user) {
+        navigate(from, { replace: true })
+        }
+        },[user])
+
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth)
 
     if (loading || sending) {
         return <Loading />
     }
 
-    if (user) {
-        //   navigate("/");
-        navigate(from, { replace: true });
-    }
 
     if (error) {
         return (
@@ -46,10 +50,12 @@ const Login = () => {
     }
 
 
-    const handleSubmit = event => {
+    const handleLogin = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
+
+            // GoogleSignIn ().then (()=>navigate("/"))
 
         signInWithEmailAndPassword(email, password)
         // console.log(email, password);
@@ -75,7 +81,7 @@ const Login = () => {
         <div className='container w-50 mx-auto mt-5'>
           <BrowserTitle title="Login"></BrowserTitle>
             <h1 className='text-center text-primary pt-5'>Please Login</h1>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
