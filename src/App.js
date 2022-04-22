@@ -17,14 +17,15 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={
-            <RequireAuth>
+            // <RequireAuth>
               <Home />
-            </RequireAuth>
+            // </RequireAuth>
         }></Route>
         <Route path='/home' element={
-            <RequireAuth>
+            // <RequireAuth>
               <Home />
-            </RequireAuth>}></Route>
+            // </RequireAuth>
+        }></Route>
         <Route path='/service/:serviceId' element={<ServiceDetail />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/login' element={<Login />}></Route>
