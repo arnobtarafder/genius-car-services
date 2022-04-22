@@ -29,6 +29,7 @@ The following open source packages are used in this project:
 * React Toastify
 * React Firebase Hooks
 * React Helmet Async
+* React Hook Form
 
 ## Firebase Qualities
 * Google Authorization
