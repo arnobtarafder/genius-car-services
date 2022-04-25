@@ -18,16 +18,16 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path='/' element={
-            // <RequireAuth>
-              <Home />
-            // </RequireAuth>
-        }></Route>
-
-        <Route path='/home' element={
-            // <RequireAuth>
-              <Home />
-            // </RequireAuth>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/service/:serviceId' element={<ServiceDetail />}></Route>
+        <Route path='/about' element={<About />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/checkout/:serviceId' element={
+          <RequireAuth>
+            <Checkout />
+          </RequireAuth>
         }></Route>
 
         <Route path='/addService' element={
@@ -35,22 +35,13 @@ function App() {
             <AddService />
           </RequireAuth>
         }></Route>
-        
+
         <Route path='/manageServices' element={
           <RequireAuth>
             <ManageService />
           </RequireAuth>
         }></Route>
 
-        <Route path='/service/:serviceId' element={<ServiceDetail />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/register' element={<Register />}></Route>
-        <Route path='/checkout' element={
-          <RequireAuth>
-            <Checkout />
-          </RequireAuth>
-        }></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer />

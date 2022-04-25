@@ -5,6 +5,7 @@ import './Service.css';
 const Service = ({ service }) => {
     const { _id, name, img, description, price } = service;
     const navigate = useNavigate();
+
     const navigateToServiceDetail = id => {
         navigate(`/service/${id}`)
     }
@@ -19,7 +20,12 @@ const Service = ({ service }) => {
                         ? description
                         :
                         <div>
-                            {description.slice(0, 278)}<span className=''><button onClick={() => navigateToServiceDetail(_id)} className='btn btn-link text-decoration-none ps-0'>...read more</button></span> 
+                            {description.slice(0, 278)}
+                            <span className=''>
+                                <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-link text-decoration-none ps-0'>
+                                    ...read more
+                                </button>
+                            </span> 
                         </div>
                     }</small></div>
                 <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-primary position-absolute top-auto bottom-0'>Book Now</button>
