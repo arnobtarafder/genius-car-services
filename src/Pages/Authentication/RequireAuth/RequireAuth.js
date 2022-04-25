@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Checkout from '../../Checkout/Checkout/Checkout';
 import Loading from '../../Shared/Loading/Loading';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const RequireAuth = ({children}) => {
@@ -43,7 +43,6 @@ const RequireAuth = ({children}) => {
                 Reload page
             </button>
             </div>
-            <ToastContainer />
         </div>
     }
 

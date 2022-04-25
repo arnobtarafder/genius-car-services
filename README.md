@@ -30,6 +30,7 @@ The following open source packages are used in this project:
 * React Firebase Hooks
 * React Helmet Async
 * React Hook Form
+* Axios
 
 ## Firebase Qualities
 * Google Authorization

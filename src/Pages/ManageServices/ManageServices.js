@@ -1,5 +1,4 @@
 import React from 'react';
-import { ToastContainer } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import useServices from '../../hooks/useServices';
 import 'react-toastify/dist/ReactToastify.css';
@@ -31,7 +30,6 @@ const ManageService = () => {
                     
                 </div>)
             }
-        <ToastContainer />
         </div>
     );
 };

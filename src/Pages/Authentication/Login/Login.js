@@ -1,10 +1,9 @@
-import { async } from '@firebase/util';
 import React, { useEffect, useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 import BrowserTitle from '../../Shared/BrowserTitle/BrowserTitle';
@@ -98,7 +97,6 @@ const Login = () => {
 
             <p>Forget Password? <button className='btn btn-link text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin />
-            <ToastContainer />
         </div>
     );
 };
