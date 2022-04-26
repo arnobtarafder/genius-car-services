@@ -17,8 +17,9 @@ const Login = () => {
     const passwordRef = useRef("");
     const navigate = useNavigate();
     const location = useLocation();
+
+
     let from = location.state?.from?.pathname || "/";
- 
     let errorElement;
 
     const [
@@ -28,12 +29,12 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    useEffect(()=>{
-        let from = location.state?.from?.pathname || "/";
-        if (user) {
-        navigate(from, { replace: true })
-        }
-        },[user])
+    // useEffect(()=>{
+    //     let from = location.state?.from?.pathname || "/";
+    //     if (user) {
+    //     navigate(from, { replace: true })
+    //     }
+    //     },[user])
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const [token] = useToken(user);
@@ -48,11 +49,11 @@ const Login = () => {
 
 
     if (error) {
-        return (
+        // return (
             errorElement = <div>
                 <p className="text-danger">Error: {error?.message}</p>
             </div>
-        )
+        // )
     }
 
 
