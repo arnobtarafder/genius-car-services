@@ -4,9 +4,9 @@ import './Register.css';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { async } from '@firebase/util';
 import Loading from '../../Shared/Loading/Loading';
 import BrowserTitle from '../../Shared/BrowserTitle/BrowserTitle';
+import useToken from '../../../hooks/useToken';
 
 
 const Register = () => {
@@ -15,9 +15,9 @@ const Register = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-        error,
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth)
+    const [updateProfile, updating] = useUpdateProfile(auth)
+    const [token] = useToken(user);
 
     const navigate = useNavigate()
 
@@ -29,8 +29,8 @@ const Register = () => {
         return <Loading />
     }
 
-    if (user) {
-        // navigate("/home");
+    if (token) {
+        navigate("/home");
     }
 
     const handleRegister = async (event) => {

@@ -10,13 +10,14 @@ import BrowserTitle from '../../Shared/BrowserTitle/BrowserTitle';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import axios from 'axios';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
     const emailRef = useRef("");
     const passwordRef = useRef("");
     const navigate = useNavigate();
     const location = useLocation();
-    // let from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathname || "/";
  
     let errorElement;
 
@@ -34,10 +35,15 @@ const Login = () => {
         }
         },[user])
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth)
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user);
 
     if (loading || sending) {
         return <Loading />
+    }
+
+    if(token){
+        navigate(from, {replace: true})
     }
 
 
@@ -60,7 +66,7 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password)
         const { data } = await axios.post("https://lit-dawn-96860.herokuapp.com/login", {email});
         localStorage.setItem("accessToken", data.accessToken)
-        // console.log(data);
+        console.log(data);
     }
 
     const navigateRegister = () => {
