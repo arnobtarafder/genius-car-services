@@ -9,6 +9,7 @@ import auth from '../../../firebase.init';
 import BrowserTitle from '../../Shared/BrowserTitle/BrowserTitle';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import axios from 'axios';
 
 const Login = () => {
     const emailRef = useRef("");
@@ -49,15 +50,17 @@ const Login = () => {
     }
 
 
-    const handleLogin = event => {
+    const handleLogin = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
             // GoogleSignIn ().then (()=>navigate("/"))
 
-        signInWithEmailAndPassword(email, password)
-        // console.log(email, password);
+        await signInWithEmailAndPassword(email, password)
+        const { data } = await axios.post("http://localhost:520/login", {email});
+        localStorage.setItem("accessToken", data.accessToken)
+        // console.log(data);
     }
 
     const navigateRegister = () => {
@@ -69,10 +72,10 @@ const Login = () => {
 
         if (email) {
             await sendPasswordResetEmail(email);
-            toast("Sent email");
+            toast.success("Sent email");
         }
         else {
-            toast("Please enter your email address!!");
+            toast.error("Please enter your email address!!");
         }
     }
 

@@ -32,7 +32,7 @@ const RequireAuth = ({children}) => {
             <button
                 onClick={async () => {
                     await sendEmailVerification();
-                    toast("Sent email")
+                    toast.success("Sent email")
                 }} 
                 className='btn btn-primary rounded-pill px-5 mt-3'>
                     Verify Email

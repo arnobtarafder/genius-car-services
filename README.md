@@ -31,6 +31,7 @@ The following open source packages are used in this project:
 * React Helmet Async
 * React Hook Form
 * Axios
+* json web token
 
 ## Firebase Qualities
 * Google Authorization

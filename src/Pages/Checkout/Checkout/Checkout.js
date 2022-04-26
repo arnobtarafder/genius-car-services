@@ -45,7 +45,7 @@ const Checkout = () => {
                 <br />
                 <input className='w-100 mb-2' type="text" name="service" value={service?.name} required readOnly/>
                 <br />
-                <input className='w-100 mb-2' type="text" name="address" autoComplete='off' value={user?.address} required/>
+                <input className='w-100 mb-2' type="text" name="address" autoComplete='off' value={user?.address} required />
                 <br />
                 <input className='w-100 mb-2' type="number" name="phone" value={user?.phone} required/>
                 <br />
