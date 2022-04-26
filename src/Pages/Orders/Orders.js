@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
+import BrowserTitle from '../Shared/BrowserTitle/BrowserTitle';
 
 const Orders = () => {
     const [user] = useAuthState(auth);
@@ -31,6 +32,7 @@ const Orders = () => {
 
     return (
         <div className='w-50 mx-auto'>
+            <BrowserTitle title="Orders"></BrowserTitle>
             <h1>Your Orders: {orders.length}</h1>
             {
                 orders.map(order => <div key = {order._id}>

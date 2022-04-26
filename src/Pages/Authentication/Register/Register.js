@@ -15,17 +15,17 @@ const Register = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
-    const [updateProfile, updating] = useUpdateProfile(auth)
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating] = useUpdateProfile(auth);
     const [token] = useToken(user);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const navigateLogin = () => {
         navigate("/login");
     }
 
-    if(loading || updating) {
+    if (loading || updating) {
         return <Loading />
     }
 
@@ -41,10 +41,10 @@ const Register = () => {
         const agree = event.target.terms.checked;
 
         // if (agree) {
-            await createUserWithEmailAndPassword(email, password)
-            await updateProfile({ displayName: name })
-            console.log("Updated profile")
-            navigate("/")
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName: name })
+        console.log("Updated profile")
+        navigate("/")
         // }
 
         createUserWithEmailAndPassword(email, password)
@@ -53,7 +53,7 @@ const Register = () => {
 
     return (
         <div className='register-form mt-5'>
-               <BrowserTitle title="Register"></BrowserTitle>
+            <BrowserTitle title="Register"></BrowserTitle>
             <h1 style={{ textAlign: "center" }}>Please Register</h1>
 
             <form onSubmit={handleRegister}>
@@ -68,7 +68,7 @@ const Register = () => {
                 <label className={`ms-0 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Conditions</label>
 
                 <input
-                    disabled = {!agree}
+                    disabled={!agree}
                     className='btn btn-primary d-block mt-2'
                     type="submit"
                     value="Register" />

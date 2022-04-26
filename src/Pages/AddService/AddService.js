@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import BrowserTitle from '../Shared/BrowserTitle/BrowserTitle';
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
@@ -22,6 +23,7 @@ const AddService = () => {
 
     return (
         <div className='w-50 mx-auto'>
+            <BrowserTitle title="Post-Service"></BrowserTitle>
             <h1>Please add a service</h1>
             <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />

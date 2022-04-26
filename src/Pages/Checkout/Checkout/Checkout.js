@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BrowserTitle from '../../Shared/BrowserTitle/BrowserTitle';
 
 
 const Checkout = () => {
@@ -37,6 +38,7 @@ const Checkout = () => {
 
     return (
         <div className='w-50 mx-auto'>
+            <BrowserTitle title="Proceed-Checkout"></BrowserTitle>
             <h2>Please Order: {service.name}</h2>
             <form onSubmit={handlePlaceOrder}>
                 <input className='w-100 mb-2' type="text" name="name" value={user?.displayName} required readOnly disabled/>

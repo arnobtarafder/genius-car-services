@@ -2,6 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import useServices from '../../hooks/useServices';
 import 'react-toastify/dist/ReactToastify.css';
+import BrowserTitle from '../Shared/BrowserTitle/BrowserTitle';
 
 const ManageService = () => {
     const [services, setServices] = useServices();
@@ -23,6 +24,7 @@ const ManageService = () => {
     }
     return (
         <div className='w-50 mx-auto'>
+            <BrowserTitle title="Delete-Service"></BrowserTitle>
             <h1>Manage your services</h1>
             {
                 services.map(service => <div key={service._id}>

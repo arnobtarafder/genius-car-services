@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -43,16 +42,16 @@ const Login = () => {
         return <Loading />
     }
 
-    if(token){
-        navigate(from, {replace: true})
+    if (token) {
+        navigate(from, { replace: true })
     }
 
 
     if (error) {
         // return (
-            errorElement = <div>
-                <p className="text-danger">Error: {error?.message}</p>
-            </div>
+        errorElement = <div>
+            <p className="text-danger">Error: {error?.message}</p>
+        </div>
         // )
     }
 
@@ -62,10 +61,10 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-            // GoogleSignIn ().then (()=>navigate("/"))
+        // GoogleSignIn ().then (()=>navigate("/"))
 
         await signInWithEmailAndPassword(email, password)
-        const { data } = await axios.post("https://lit-dawn-96860.herokuapp.com/login", {email});
+        const { data } = await axios.post("https://lit-dawn-96860.herokuapp.com/login", { email });
         localStorage.setItem("accessToken", data.accessToken)
         console.log(data);
     }
@@ -88,7 +87,7 @@ const Login = () => {
 
     return (
         <div className='container w-50 mx-auto mt-5'>
-          <BrowserTitle title="Login"></BrowserTitle>
+            <BrowserTitle title="Login"></BrowserTitle>
             <h1 className='text-center text-primary pt-5'>Please Login</h1>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
