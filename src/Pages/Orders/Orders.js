@@ -35,7 +35,7 @@ const Orders = () => {
             <BrowserTitle title="Orders"></BrowserTitle>
             <h1>Your Orders: {orders.length}</h1>
             {
-                orders.map(order => <div key = {order._id}>
+                orders.map(order => <div key={order._id}>
                     <p>{order.email} : {order.service}</p>
                 </div>)
             }

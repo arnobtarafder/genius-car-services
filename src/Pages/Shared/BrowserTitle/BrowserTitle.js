@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const BrowserTitle = ({title}) => {
+const BrowserTitle = ({ title }) => {
     return (
         <div>
             <Helmet>

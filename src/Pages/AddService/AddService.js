@@ -4,6 +4,7 @@ import BrowserTitle from '../Shared/BrowserTitle/BrowserTitle';
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
+    
     const onSubmit = data => {
         console.log(data);
         const url = `https://lit-dawn-96860.herokuapp.com/service`;
@@ -14,11 +15,11 @@ const AddService = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then(result => {
-            // console.log(result);
-        })
-            
+            .then(res => res.json())
+            .then(result => {
+                // console.log(result);
+            })
+
     };
 
     return (
@@ -27,7 +28,7 @@ const AddService = () => {
             <h1>Please add a service</h1>
             <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                <textarea className='mb-2' placeholder='Description' {...register("description", { required: true }) } />
+                <textarea className='mb-2' placeholder='Description' {...register("description", { required: true })} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
                 <input type="submit" value="Add Service" />

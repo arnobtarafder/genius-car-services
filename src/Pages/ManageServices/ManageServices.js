@@ -9,17 +9,17 @@ const ManageService = () => {
 
     const handleDelete = id => {
         const proceed = window.confirm("Are you sure?");
-        if(proceed) {
+        if (proceed) {
             const url = `https://lit-dawn-96860.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
-            .then(res => res.json())
-            .then(data => {
-                toast.success("Successfully deleted");
-                const remaining = services.filter(service => service._id !== id);
-                setServices(remaining)
-            })
+                .then(res => res.json())
+                .then(data => {
+                    toast.success("Successfully deleted");
+                    const remaining = services.filter(service => service._id !== id);
+                    setServices(remaining)
+                })
         }
     }
     return (
@@ -29,7 +29,7 @@ const ManageService = () => {
             {
                 services.map(service => <div key={service._id}>
                     <h5>{service.name} <button onClick={() => handleDelete(service._id)}>X</button> </h5>
-                    
+
                 </div>)
             }
         </div>

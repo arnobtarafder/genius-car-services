@@ -1,14 +1,15 @@
-#image{
+#image {
     width: 50%;
     margin: 0 auto;
 }
 
 @media only screen and (max-width: 560px) {
-    #image{
+    #image {
         width: 97%;
         margin: 0 auto;
     }
-    #description{
+
+    #description {
         width: 100%;
     }
 }

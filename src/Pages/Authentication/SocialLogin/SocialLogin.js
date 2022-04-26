@@ -17,29 +17,29 @@ const SocialLogin = () => {
 
 
     let errorElement;
-    useEffect(()=>{
+    useEffect(() => {
         if (user || user2) {
 
-            navigate(from, {replace: true});
-            
+            navigate(from, { replace: true });
+
         }
 
-        },[user || user2])
-    
-    if(loading || loading2) {
+    }, [user || user2])
+
+    if (loading || loading2) {
         return <Loading />
     }
-    
-    if(error || error2) {
+
+    if (error || error2) {
         return (
             errorElement = <div>
-            <p className="text-danger">Error: {error?.message} {error2?.message}</p>
+                <p className="text-danger">Error: {error?.message} {error2?.message}</p>
             </div>
         )
     }
 
-    if(token) {
-        navigate(from, {replace: true});
+    if (token) {
+        navigate(from, { replace: true });
     }
     // if (user || user2) {
     //     navigate("/home")
@@ -49,32 +49,32 @@ const SocialLogin = () => {
 
     return (
         <div>
-        <div className='d-flex align-items-center'>
-            <div style={{height: "1px"}} className='bg-primary w-50'></div>
-            <p className='mt-3 px-3'>or</p>
-            <div style={{height: "1px"}} className='bg-primary w-50'></div>
-         </div>   
-         {errorElement}
+            <div className='d-flex align-items-center'>
+                <div style={{ height: "1px" }} className='bg-primary w-50'></div>
+                <p className='mt-3 px-3'>or</p>
+                <div style={{ height: "1px" }} className='bg-primary w-50'></div>
+            </div>
+            {errorElement}
             <div className=''>
 
                 <button
                     onClick={() => signInWithGoogle()}
 
                     className='btn btn-primary w-50'>
-                    <img style={{width: "30px"}} src="https://seeklogo.com/images/N/new-google-favicon-logo-5E38E037AF-seeklogo.com.png" alt="" />
+                    <img style={{ width: "30px" }} src="https://seeklogo.com/images/N/new-google-favicon-logo-5E38E037AF-seeklogo.com.png" alt="" />
                     <span className='px-3'>Google Sign In</span>
                 </button>
 
                 <button className='btn btn-info w-50 my-3'>
-                    <img style={{width: "30px"}} src="https://github.com/ProgrammingHero1/genius-car-service-direction-module-62/blob/main/src/images/social/facebook.png?raw=true" alt="" />
+                    <img style={{ width: "30px" }} src="https://github.com/ProgrammingHero1/genius-car-service-direction-module-62/blob/main/src/images/social/facebook.png?raw=true" alt="" />
                     <span className='px-3'>Facebook Sign In</span>
                 </button>
 
-                <button 
+                <button
                     onClick={() => signInWithGithub()}
 
                     className='btn btn-primary w-50'>
-                    <img style={{width: "30px"}} src="https://github.com/ProgrammingHero1/genius-car-service-direction-module-62/blob/main/src/images/social/github.png?raw=true" alt="" />
+                    <img style={{ width: "30px" }} src="https://github.com/ProgrammingHero1/genius-car-service-direction-module-62/blob/main/src/images/social/github.png?raw=true" alt="" />
                     <span className='px-3'>Github Sign In</span>
                 </button>
             </div>

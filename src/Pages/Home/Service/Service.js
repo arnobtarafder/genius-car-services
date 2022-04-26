@@ -25,9 +25,9 @@ const Service = ({ service }) => {
                                 <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-link text-decoration-none ps-0'>
                                     ...read more
                                 </button>
-                            </span> 
+                            </span>
                         </div>
-                    }</small></div>
+                }</small></div>
                 <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-primary position-absolute top-auto bottom-0'>Book Now</button>
             </div>
         </div>

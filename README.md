@@ -33,6 +33,20 @@ The following open source packages are used in this project:
 * Axios
 * json web token
 
+
+## Databases & Securities
+* node js
+* express js
+* Mongodb
+* cors
+* json web token (jwt)
+
+
+## Deployment
+* firebase hosting
+* heroku cloud application
+
+
 ## Firebase Qualities
 * Google Authorization
 * Github Authorization

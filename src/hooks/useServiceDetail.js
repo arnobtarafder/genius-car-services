@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const useServiceDetail = (serviceId) => {
     const [service, setService] = useState([])
-    
-    useEffect( () => {
+
+    useEffect(() => {
         fetch(`https://lit-dawn-96860.herokuapp.com/service/${serviceId}`)
-        .then(res => res.json())
-        .then(data => setService(data))
+            .then(res => res.json())
+            .then(data => setService(data))
     }, [serviceId])
     return [service]
- 
+
 }
 
 export default useServiceDetail;

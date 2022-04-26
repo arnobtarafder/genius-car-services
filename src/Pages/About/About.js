@@ -8,10 +8,10 @@ const About = () => {
                 <title>About | Genius Car Services</title>
             </Helmet>
             <ol className='pt-5'>
-            <li>This is the newer version of genesis automobiles</li>
-            <li>This website can be a full professional site as it made</li>
-            <li>But it is under construction now</li>
-            <li>This is a full responsive site</li>
+                <li>This is the newer version of genesis automobiles</li>
+                <li>This website can be a full professional site as it made</li>
+                <li>But it is under construction now</li>
+                <li>This is a full responsive site</li>
             </ol>
         </div>
     );
