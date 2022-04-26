@@ -16,7 +16,7 @@ This is not fulfilled to post now.
 * Cart
 * Proceed Checkout
 
-## Prerequisites
+## Technologies
 
 The following open source packages are used in this project:
 * React JS v18
